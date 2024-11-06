@@ -1,5 +1,6 @@
 Ce script permet de sauvegarder le dossier .config de votre node Quilibrium sur un serveur distant.
 Vous devez connaitre l'ip et le mot de passe ROOT du serveur de sauvegarde.
+J'utilise SCP pour le transfert entre les deux machines.
 Ce script fonctionne si vous avez installé le node Quilibrium grace au script QONE.
 
 Pour l'utiliser, il suffit de lancer cette commande dans un shell.
