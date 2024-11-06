@@ -68,9 +68,9 @@ else
     echo "----------> Fichier transféré avec succès vers $REMOTE_IP:$REMOTE_PATH."
 fi
 
-echo "Suppression de l'archive local précédemment crée pour gain de place. Veuillez patienter 5 secondes ...
+echo "Suppression de l'archive local précédemment crée pour gain de place. Veuillez patienter 5 secondes ..."
 sleep 5
-rm -rf $ZIP_FILE
+rm -rf /root/${HOSTNAME}_${DATE}_backup_config_quil.zip
 
 # Affichage du récapitulatif
 echo "-----------------------------------------------------------------------------------"
@@ -80,8 +80,8 @@ echo "--------------------------------------------------------------------------
 echo "-----------------------------------------------------------------------------------"
 echo "         Sauvegarde du dossier .config de votre node a été efféctuée.              "
 echo "         Elle ce trouve dans le dossier /opt de votre serveur distant.             "
-echo "         Rappel de l'ip du serveur distant : $REMOTE_IP"                           "
-echo "         Rappel du chemin de la sauvegarde : $REMOTE_PATH"                         "
-echo "         Rappel du nom de fichier de sauvegarde : $ZIP_FILE"                       "
+echo "         Rappel de l'ip du serveur distant : $REMOTE_IP                            "
+echo "         Rappel du chemin de la sauvegarde : $REMOTE_PATH                          "
+echo "         Rappel du nom de fichier de sauvegarde : $ZIP_FILE                        "
 echo "-----------------------------------------------------------------------------------"
 echo "-----------------------------------------------------------------------------------"
