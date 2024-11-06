@@ -4,11 +4,18 @@ apt-get install zip -y
 
 ######################################################################################
 # Modifier selon votre configuration.
-REMOTE_IP="103.252.89.87"             # Remplacez par l'IP du serveur de destination
-REMOTE_PORT="1337"                    # Remplacez par le port SSH du serveur de destination
-REMOTE_USER="root"                    # Remplacez par le nom d'utilisateur du serveur de destination
-REMOTE_PATH="/opt"                    # Remplacez par le chemin de destination sur le serveur
+#REMOTE_IP=""          # Remplacez par l'IP du serveur de destination
+#REMOTE_PORT=""        # Remplacez par le port SSH du serveur de destination
+#REMOTE_USER=""        # Remplacez par le nom d'utilisateur du serveur de destination
+REMOTE_PATH="/opt"     # Remplacez par le chemin de destination sur le serveur
 ######################################################################################
+
+echo "Veuillez entrer l'ip du serveur distant"
+read REMOTE_IP
+echo "Veuillez entrer le port du serveur distant"
+read REMOTE_PORT
+echo "Veuillez entrer le nom d'utilisateur du serveur distant"
+read REMOTE_USER
 
 # Variables automatiques
 HOSTNAME=$(hostname)
