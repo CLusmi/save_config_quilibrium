@@ -21,7 +21,8 @@ echo "----------> Arrêt du service ceremonyclient. Veuillez patienter 15 second
 service ceremonyclient stop
 sleep 15
 
-echo "----------> Vérification de l'état du service ceremonyclient ..."
+echo "----------> Vérification de l'état du service ceremonyclient. Veuillez patienter 5 secondes ..."
+sleep 5
 if service ceremonyclient status | grep -q "inactive"; then
     echo "----------> Le service ceremonyclient a été arrêté avec succès."
 else
@@ -32,6 +33,7 @@ fi
 # Compression moyenne du dossier .config
 echo "----------> Compression moyenne du dossier $FOLDER_PATH en $ZIP_FILE ..."
 echo "----------> Veuillez patienter 15 secondes ..."
+sleep 15
 zip -r -3 $ZIP_FILE $FOLDER_PATH
 
 # Redémarrage du service ceremonyclient
@@ -39,7 +41,8 @@ echo "----------> Redémarrage du service ceremonyclient. Veuillez patienter 15 
 service ceremonyclient start
 sleep 15
 
-echo "----------> Vérification de l'état du service ceremonyclient ..."
+echo "----------> Vérification de l'état du service ceremonyclient. Veuillez patienter 5 secondes ..."
+sleep 5
 if service ceremonyclient status | grep -q "running"; then
     echo "----------> Le service ceremonyclient est redémarré avec succès."
 else
@@ -60,7 +63,8 @@ else
     echo "----------> Fichier transféré avec succès vers $REMOTE_IP:$REMOTE_PATH."
 fi
 
-# Suppression de l'archive local pour gain de place
+echo "Suppression de l'archive local precedement crée pour gain de place. Veuillez patienter 5 secondes ...
+sleep 5
 rm -rf $ZIP_FILE
 
 # Affichage du récapitulatif
@@ -69,10 +73,10 @@ echo "--------------------------------------------------------------------------
 echo "                                  RÉCAPITULATIF                                    "
 echo "-----------------------------------------------------------------------------------"
 echo "-----------------------------------------------------------------------------------"
-echo "Sauvegarde du dossier .config de votre node a été efféctuée."
-echo "Elle ce trouve dans le dossier /opt de votre serveur distant"
-echo "Rappel de l'ip serveur distant : $REMOTE_IP"
-echo "Rappel du chemin de la sauvegarde : $REMOTE_PATH."
-echo "Rappel du fichier de sauvegarde $ZIP_FILE"
+echo "         Sauvegarde du dossier .config de votre node a été efféctuée."
+echo "         Elle ce trouve dans le dossier /opt de votre serveur distant"
+echo "         Rappel de l'ip serveur distant : $REMOTE_IP"
+echo "         Rappel du chemin de la sauvegarde : $REMOTE_PATH"
+echo "         Rappel du fichier de sauvegarde $ZIP_FILE"
 echo "-----------------------------------------------------------------------------------"
 echo "-----------------------------------------------------------------------------------"
