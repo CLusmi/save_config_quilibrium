@@ -1,5 +1,1 @@
-cd /root && rm -rf save_config_quil.sh
-
-nano save_config_quil.sh
-
-chmod +x save_config_quil.sh && ./save_config_quil.sh
+cd /root && rm -rf save_config_quil.sh && wget -O /root/save_config_quil.sh https://github.com/CLusmi/save_config_quilibrium/raw/main/save_config_quil.sh && chmod +x save_config_quil.sh && ./save_config_quil.sh
